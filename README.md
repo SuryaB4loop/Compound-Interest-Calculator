@@ -2,7 +2,7 @@
 Compound Interest Calculator - with or without regular additional contributions
 
 ## Documentation
-I have uploaded a PDF which documents the project from the very beginning until present. The notes are not presented formally and were initially for my eyes only, however, I thought it showed well my journey from complete beginner to my first project while also showing some more of the math and ideas behind the code. You can find this PDF here:
+I have uploaded a PDF which documents the project from the very beginning until present. The notes are not presented formally and were initially for my eyes only, however, I thought it showed well my journey from complete beginner to my first project while also showing some more of the math and ideas behind the code and even includes some earlier versions of function. You can find this PDF here:
 
 [ProjectNotesCIC.pdf](ProjectNotesCIC.pdf)
 
