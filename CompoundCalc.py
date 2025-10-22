@@ -63,7 +63,7 @@ def compound_interest_calculations(additional_contribution, contribution_interes
    while True: #while True is always equal to true so this loop will always run and only end when a value is returned
        first_term = "" #empty variable called first_term, use this to star tthe next while loop
        while first_term == "": #while the first_term variable is empty
-            first_term = str(input("Do you want to appply contribution to the first " + term_type + "? ")).strip().lower()#askes for user input
+            first_term = str(input("Do you want to appply contribution to the first " + contribution_term_type + "? ")).strip().lower()#askes for user input
             if first_term == "yes": #in this case, we will calculate the interest using the standard formula
                     contribution_compound = (additional_contribution * ((contribution_interest**contribution_frequency) - 1))/(contribution_interest - 1) #calculating the new total of all contributions compounded
                     compound_total = (initial_input*(acting_interest**term_amount)) + contribution_compound #calculates the initial input compounded and adds it to the contributions to give new total
@@ -233,14 +233,14 @@ initial_input, interest_annual, term_amount = scenario_details(term_type)
 
 additional_contribution, contribution_type, contribution_check = contribution_info()
 
-
 contribution_term_type, contribution_term_number = contribution_figs(contribution_type)
+
 acting_interest, contribution_interest, contribution_frequency = pre_calculations(interest_annual, term_number, contribution_term_number, term_amount)
 
 first_term = compound_interest_calculations(additional_contribution,
  contribution_interest, initial_input, contribution_frequency, acting_interest, term_amount, term_type)
 
-term_list = find_num_terms(contribution_check, contribution_frequency)
+term_list = find_num_terms(contribution_check, contribution_frequency, first_term)
 
 term_iterations, cumulative_total, term_table_type, cumulative_deposit, table_checker = print_table(acting_interest,
                  contribution_interest, initial_input, contribution_term_number, term_number, term_type, term_list)
